@@ -33,6 +33,7 @@ controllerParams.runStopRegister = ['08'; '14']; %start/stop register
 % Create Log file
 filename = [datestr(clock, 29), '_logfile.txt'];
 fileID = fopen(filename, 'w');
+fprintf(fileID, '%s %10s %8s\n', 'Date', 'Time', 'Temp');
 
 % Stimulation Profile
 
