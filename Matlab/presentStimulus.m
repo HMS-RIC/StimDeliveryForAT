@@ -74,7 +74,7 @@ function [] = presentStimulus(stimStruct, index)
 
         %Append log file with timing information
         currentTimeVec = clock;
-        fprintf(stimStruct.fileID, '%s\n', [datestr(currentTimeVec, 23), ' ', datestr(currentTimeVec, 13)]);
+        fprintf(stimStruct.fileID, '%s %d\n', [datestr(currentTimeVec, 23), ' ', datestr(currentTimeVec, 13)], stimStruct.setpoint(index));
         %string = sprintf('Starting PID for %.1f seconds', stimStruct.stimDuration(index));
     end
 
